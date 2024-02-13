@@ -34,8 +34,12 @@ $color-secondary: #075985;
   margin: 10px;
 }
 
-input {
-  width: 200px;
+input[type="text"] {
+  width: 180px;
+}
+
+.file-input {
+  display: block;
 }
 
 textarea {

@@ -11,8 +11,8 @@
 
   <div>
     <%= form.label :cover, class: 'label' %>
-    <%= show_cover(book, 400) %>
-    <%= form.file_field :cover %>
+    <%= show_cover(book, 400) unless book.new_record? %>
+    <%= form.file_field :cover, class: 'file-input' %>
   </div>
 
   <div class="field">
