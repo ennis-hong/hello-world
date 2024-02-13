@@ -4,6 +4,8 @@ class Book < ApplicationRecord
   validates :title, :content, presence: true
   validate :valid_isbn, if: -> { isbn.present? }
 
+  has_one_attached :cover
+
   private
 
   def valid_isbn
