@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Cover</th>
       <th>Title</th>
       <th>Content</th>
       <th>ISBN</th>
@@ -16,13 +17,14 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
+        <td><%= show_cover(book, 100) %></td>
         <td><%= book.title %></td>
         <td><%= book.content %></td>
         <td><%= book.isbn %></td>
         <td><%= book.publish_date %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', book, class: 'btn' %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) , class: 'btn'%></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+<%= link_to 'New Book', new_book_path, class: 'btn' %>
