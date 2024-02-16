@@ -9,9 +9,6 @@
 
 import { Controller } from "stimulus"
 import { MandarinTraditional } from "flatpickr/dist/l10n/zh-tw.js"
-import flatpickr from "flatpickr"
-require("flatpickr/dist/flatpickr.css")
-
 export default class extends Controller {
   static targets = ["dateInput"]
 
