@@ -1,29 +1,33 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+  <p id="notice" class="alert alert-success" role="alert"><%= notice %></p>
+<% end %>
+<div class="card w-50">
+  <div class="card-body">
+    <p>
+      <strong>Cover:</strong>
+      <%= show_cover(@book, 500) %>
+    </p>
 
-<p>
-  <strong>Cover:</strong>
-  <%= show_cover(@book, 500) %>
-</p>
+    <p>
+      <strong>Title:</strong>
+      <%= @book.title %>
+    </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+    <p>
+      <strong>Content:</strong>
+      <%= show_wrap(@book.content) %>
+    </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @book.content %>
-</p>
+    <p>
+      <strong>ISBN:</strong>
+      <%= @book.isbn %>
+    </p>
 
-<p>
-  <strong>ISBN:</strong>
-  <%= @book.isbn %>
-</p>
-
-<p>
-  <strong>Publish date:</strong>
-  <%= @book.publish_date %>
-</p>
-
-<%= link_to 'Edit', edit_book_path(@book), class: 'btn' %>
-<%= link_to 'Back', books_path, class: 'btn' %>
+    <p>
+      <strong>Publish date:</strong>
+      <%= @book.publish_date %>
+    </p>
+  </div>
+</div>
+<%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-secondary text-white mt-2' %>
+<%= link_to 'Back', books_path, class: 'btn btn-secondary text-white mt-2' %>
