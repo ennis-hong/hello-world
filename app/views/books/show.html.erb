@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Cover:</strong>
+  <%= show_cover(@book, 500) %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @book.title %>
 </p>
@@ -11,9 +16,14 @@
 </p>
 
 <p>
+  <strong>ISBN:</strong>
+  <%= @book.isbn %>
+</p>
+
+<p>
   <strong>Publish date:</strong>
   <%= @book.publish_date %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Edit', edit_book_path(@book), class: 'btn' %>
+<%= link_to 'Back', books_path, class: 'btn' %>

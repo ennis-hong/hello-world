@@ -9,18 +9,29 @@
     </div>
   <% end %>
 
+  <div>
+    <%= form.label :cover, class: 'label' %>
+    <%= show_cover(book, 400) unless book.new_record? %>
+    <%= form.file_field :cover, class: 'file-input' %>
+  </div>
+
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title, class: 'label' %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.label :content, class: 'label' %>
+    <%= form.text_area :content, rows: '20' %>
   </div>
 
   <div class="field">
-    <%= form.label :publish_date %>
+    <%= form.label :isbn, 'ISBN', class: 'label' %>
+    <%= form.text_field :isbn, maxlength: '13' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publish_date, class: 'label' %>
     <%= form.date_select :publish_date %>
   </div>
 
