@@ -1,3 +1,56 @@
-// Place all the styles related to the Books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.img_thumb {
+  margin-top: 10px;
+  width: auto;
+  height: 100px;
+}
+
+main {
+  padding: 20px;
+}
+
+input[type="text"] {
+  width: 180px;
+}
+
+.file-input {
+  display: block;
+}
+
+textarea {
+  width: 500px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #009879;
+  font-size: large;
+  color: white;
+  width: 25vw;
+  height: 50px;
+  &.s_col {
+    width: 10vw;
+  }
+  &.x_col {
+    width: 35vw;
+  }
+}
+
+td {
+  background-color: white;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+tr {
+  border-bottom: 1px solid #dddddd;
+  &:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  &:nth-of-type(even) td {
+    background-color: #f3f3f3;
+  }
+}

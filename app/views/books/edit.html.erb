@@ -1,6 +1,7 @@
-<h1>Editing Book</h1>
-
-<%= render 'form', book: @book %>
-
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+<div class="card">
+  <div class="card-body">
+    <%= render 'form', book: @book %>
+  </div>
+</div>
+<%= link_to 'Show', @book, class: 'btn btn-secondary text-white mt-2' %>
+<%= link_to 'Back', books_path, class: 'btn btn-secondary text-white mt-2' %>
